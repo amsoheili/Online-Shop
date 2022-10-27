@@ -1,0 +1,86 @@
+.layout {
+  border-bottom: solid #000 2px;
+  height: 20vh;
+  padding: 1rem 0rem;
+}
+
+.shopping {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 1rem 2rem;
+  margin: 0 3rem;
+  color: var(--main-text-color);
+  font-size: 1.5rem;
+  border-bottom: solid 1px #bbb;
+}
+
+.shopping > div {
+  padding: 0rem 1.5rem;
+}
+
+.shopping button {
+  border: none;
+}
+
+.basket {
+  display: flex;
+  flex-direction: row;
+  width: 5rem;
+  justify-content: space-between;
+}
+
+.basket svg {
+  padding-top: 0.2rem;
+}
+
+.basket span {
+  color: var(--fourth-background-color);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0rem 0.3rem;
+}
+
+.entering {
+  display: flex;
+  flex-direction: row;
+}
+
+.entering div:first-child {
+  margin: 0rem 1rem 0rem 0rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  padding: 0.2rem 1rem;
+}
+
+.links li {
+  list-style: none;
+  padding: 0rem 2rem;
+}
+
+.children {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

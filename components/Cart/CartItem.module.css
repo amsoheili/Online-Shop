@@ -1,0 +1,27 @@
+.main {
+  width: 70%;
+  background-color: var(--first-background-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info > div {
+  padding: 0 1rem;
+}
+
+.increase,
+.decrease {
+  margin: 0 1rem;
+}

@@ -1,0 +1,82 @@
+:root {
+  --main-text-color: #000;
+  --main-background-color: #fff;
+  /* --first-text-color:  */
+  --first-background-color: #d654b3;
+  --secondary-background-color: #821565;
+  --default-background-color: #fff;
+  --third-background-color: #f50519;
+  --fourth-background-color: #d14955;
+  --fifth-background-color: #984579;
+  --sixth-background-color: #984eee;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--default-background-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
+.first-button {
+  border: none;
+  background-color: var(--first-background-color);
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.first-button:hover {
+  background-color: var(--secondary-background-color);
+}
+
+.second-button {
+  border: none;
+  background-color: var(--fourth-background-color);
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.second-button:hover {
+  background-color: var(--third-background-color);
+}
+
+.third-button {
+  border: none;
+  background-color: var(--fifth-background-color);
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.third-button:hover {
+  background-color: var(--secondary-background-color);
+}
