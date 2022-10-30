@@ -1,0 +1,42 @@
+.card {
+  margin: 1rem;
+  padding: 0 5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.main > div {
+  margin: 1rem 0;
+}
+
+.profile-image {
+  width: 10rem;
+  height: 10rem;
+}
+
+.profile-image > div {
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+}
+
+.user-info {
+  width: 100%;
+}
+
+.username,
+.password {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-info h4 {
+  text-align: center;
+}

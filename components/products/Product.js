@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
+import { addItemToCart } from "../../helper/addProductToCart";
 import { userActions } from "../../store/user";
 import classes from "./Product.module.css";
 
@@ -13,18 +14,14 @@ const Product = (props) => {
       router.push("/login");
       return;
     }
-    console.log(props.id);
-    dispatch(
-      userActions.addItemToCart({
-        item: {
-          id: props.id,
-          name: props.name,
-          price: props.price,
-          description: props.description,
-          image: props.image,
-        },
-      })
-    );
+    //console.log(props.id);
+    addItemToCart(dispatch, {
+      id: props.id,
+      name: props.name,
+      price: props.price,
+      description: props.description,
+      image: props.image,
+    });
   };
 
   return (

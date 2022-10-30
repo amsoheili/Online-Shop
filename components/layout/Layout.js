@@ -85,9 +85,7 @@ const Layout = (props) => {
               </li>
               {user.username == "admin" && (
                 <li>
-                  <Link href="/adding-product">
-                    Adding New Product(only available for salespersons)
-                  </Link>
+                  <Link href="/adding-product">Add New Product</Link>
                 </li>
               )}
             </div>

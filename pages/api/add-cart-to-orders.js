@@ -1,3 +1,4 @@
+import { uuidV4 } from "mongodb/lib/core/utils";
 import MongoClient from "mongodb/lib/mongo_client";
 
 const handler = async (req, res) => {
@@ -21,8 +22,12 @@ const handler = async (req, res) => {
       .collection("users")
       .updateOne(
         { username: data.username },
-        { $push: { orders: data.cartItems } }
+        { $push: { orders: { items: data.cartItems } } }
       );
+
+    // const orders = await usersCollection.find({ username: data.username });
+
+    // const result = await orders.push({ items: data.cartItems });
 
     client.close();
 
