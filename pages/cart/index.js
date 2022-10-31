@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Cart from "../../components/Cart/Cart";
 
-const CartPage = () => {
+const CartPage = (props) => {
   return (
     <>
       <Cart />

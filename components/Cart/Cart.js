@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
-import { orderCartItems } from "../../helper/shopping";
+import { orderCartItems } from "../../helper/orderCartItems";
 import { useRouter } from "next/router";
 
 const Cart = (props) => {
@@ -26,7 +26,7 @@ const Cart = (props) => {
     }, 3000);
     // setTimeout(router.push("/products"), 4000);
   };
-
+  console.log(cartItems);
   return (
     <div className={classes.main}>
       {cartItems.length > 0 ? (

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemToCart } from "../../helper/addProductToCart";
+import { addItemToCart } from "../../helper/increaseItemInCart";
 import { userActions } from "../../store/user";
 import classes from "./Product.module.css";
 
@@ -8,6 +8,8 @@ const Product = (props) => {
   const dispatch = useDispatch();
   const isUserLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const router = useRouter();
+  const username = useSelector((state) => state.user.username);
+  const cartItems = useSelector((state) => state.user.cartItems);
 
   const addItemToCartHandler = () => {
     if (!isUserLoggedIn) {
@@ -16,11 +18,15 @@ const Product = (props) => {
     }
     //console.log(props.id);
     addItemToCart(dispatch, {
-      id: props.id,
-      name: props.name,
-      price: props.price,
-      description: props.description,
-      image: props.image,
+      username: username,
+      item: {
+        id: props.id,
+        name: props.name,
+        price: props.price,
+        description: props.description,
+        image: props.image,
+      },
+      cartItems: cartItems,
     });
   };
 

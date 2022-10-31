@@ -9,5 +9,6 @@ export const orderCartItems = (dispatch, user) => {
     username: user.username,
     cartItems: user.cartItems,
   });
+  axios.post("/api/clear-cart", { username: user.username });
   dispatch(userActions.clearCart());
 };

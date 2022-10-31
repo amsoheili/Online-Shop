@@ -1,35 +1,40 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import decreaseItemInCart from "../../helper/decreaseItemInCart";
+import { increaseItemInCart } from "../../helper/increaseItemInCart";
 import { userActions } from "../../store/user";
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
   const dispatch = useDispatch();
+  const username = useSelector((state) => state.user.username);
+  const cartItems = useSelector((state) => state.user.cartItems);
+
   const increaseItemHandler = () => {
-    dispatch(
-      userActions.addItemToCart({
-        item: {
-          id: props.id,
-          name: props.name,
-          price: props.price,
-          description: props.description,
-          image: props.image,
-        },
-      })
-    );
+    increaseItemInCart(dispatch, {
+      username,
+      cartItems,
+      item: {
+        id: props.id,
+        name: props.name,
+        price: props.price,
+        description: props.description,
+        image: props.image,
+      },
+    });
   };
 
   const decreaseItemHandler = () => {
-    dispatch(
-      userActions.deleteItemInCart({
-        item: {
-          id: props.id,
-          name: props.name,
-          price: props.price,
-          description: props.description,
-          image: props.image,
-        },
-      })
-    );
+    decreaseItemInCart(dispatch, {
+      username,
+      cartItems,
+      item: {
+        id: props.id,
+        name: props.name,
+        price: props.price,
+        description: props.description,
+        image: props.image,
+      },
+    });
   };
 
   return (

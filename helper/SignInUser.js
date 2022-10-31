@@ -14,7 +14,7 @@ const SignInUser = async (dispatch, user) => {
 
   const userData = await getUserData(user.username);
 
-  console.log(userData);
+  //console.log(userData);
 
   dispatch(userActions.setUsername({ username: userData.username }));
   dispatch(userActions.setPassword({ password: userData.password }));
