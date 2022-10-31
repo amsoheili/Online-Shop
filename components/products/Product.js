@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemToCart } from "../../helper/increaseItemInCart";
+import { increaseItemInCart } from "../../helper/increaseItemInCart";
 import { userActions } from "../../store/user";
 import classes from "./Product.module.css";
 
@@ -17,7 +17,7 @@ const Product = (props) => {
       return;
     }
     //console.log(props.id);
-    addItemToCart(dispatch, {
+    increaseItemInCart(dispatch, {
       username: username,
       item: {
         id: props.id,
