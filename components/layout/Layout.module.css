@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: right;
   padding: 1rem 2rem;
+  padding-right: 0;
   margin: 0 3rem;
   color: var(--main-text-color);
   font-size: 1.5rem;
@@ -44,10 +45,22 @@
 .entering {
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 
 .entering div:first-child {
   margin: 0rem 1rem 0rem 0rem;
+}
+
+.loggedIn {
+  display: flex;
+  flex-direction: row;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.loggedIn div {
+  margin-right: 1rem;
 }
 
 .navbar {

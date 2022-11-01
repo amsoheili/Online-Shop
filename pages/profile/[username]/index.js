@@ -1,12 +1,15 @@
+import AccessError from "../../../components/AccessError";
 import Profile from "../../../components/Profile";
 import MongoClient from "mongodb";
+import { useSelector } from "react-redux";
 
 const ProfilePage = (props) => {
-  console.log(props.userData.orders);
-  return (
-    <>
-      <Profile userData={props.userData} />
-    </>
+  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+
+  return isLoggedIn ? (
+    <Profile userData={props.userData} />
+  ) : (
+    <AccessError message="Please Login To Your Account First" />
   );
 };
 

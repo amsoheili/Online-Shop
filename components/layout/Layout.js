@@ -11,10 +11,9 @@ import { useSession, signOut } from "next-auth/react";
 import classes from "./Layout.module.css";
 import logoutUser from "../../helper/logoutUser";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Layout = (props) => {
-  // const isUserLoggedIn = useSelector((state) => state.user.isLoggedIn);
-  // const username = useSelector((state) => state.user.username);
   const user = {
     isUserLoggedIn: useSelector((state) => state.user.isLoggedIn),
     username: useSelector((state) => state.user.username),
@@ -25,15 +24,16 @@ const Layout = (props) => {
 
   const dispatch = useDispatch();
 
-  //console.log(`render ${username}`);
-
-  // if (username == "admin") {
-  //   setIsAdmin(true);
-  // }
+  const router = useRouter();
 
   const logoutHandler = () => {
     //console.log(`s`);
     logoutUser(dispatch, user.username);
+    router.push("/login");
+  };
+
+  const enterProfileHandler = () => {
+    router.push(`/profile/${user.username}`);
   };
 
   return (
@@ -61,16 +61,26 @@ const Layout = (props) => {
             </div>
           )}
           {user.isUserLoggedIn && (
-            <div>
-              <button
-                className={"second-button " + classes.entering}
-                onClick={logoutHandler}
-              >
-                <div>
-                  <FontAwesomeIcon icon={faRightFromBracket} />
-                </div>
-                <div>Log out</div>
-              </button>
+            <div className={classes.loggedIn}>
+              <div>
+                <button
+                  className={"second-button " + classes.entering}
+                  onClick={logoutHandler}
+                >
+                  <div>
+                    <FontAwesomeIcon icon={faRightFromBracket} />
+                  </div>
+                  <div>Log out</div>
+                </button>
+              </div>
+              <div>
+                <button
+                  className={"second-button " + classes.entering}
+                  onClick={enterProfileHandler}
+                >
+                  My Profile
+                </button>
+              </div>
             </div>
           )}
         </div>

@@ -72,6 +72,8 @@ const SignUp = (props) => {
     const newUser = {
       username: enteredUsername,
       password: enteredPassword,
+      orders: [],
+      cartItems: [],
     };
 
     props.onAddUser(newUser);
