@@ -12,6 +12,7 @@ import classes from "./Layout.module.css";
 import logoutUser from "../../helper/logoutUser";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { AppBar } from "@material-ui/core";
 
 const Layout = (props) => {
   const user = {
@@ -38,6 +39,7 @@ const Layout = (props) => {
 
   return (
     <>
+      {/* <AppBar position="static"> */}
       <div className={classes.layout}>
         <div className={classes.shopping}>
           <div>
@@ -75,7 +77,7 @@ const Layout = (props) => {
               </div>
               <div>
                 <button
-                  className={"second-button " + classes.entering}
+                  className={"second-button myProf " + classes.entering}
                   onClick={enterProfileHandler}
                 >
                   My Profile
@@ -102,6 +104,7 @@ const Layout = (props) => {
           </ul>
         </nav>
       </div>
+      {/* </AppBar> */}
       <div className={classes.children}>{props.children}</div>
     </>
   );

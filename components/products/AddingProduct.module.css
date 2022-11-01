@@ -49,3 +49,9 @@
 .submit button:hover {
   background-color: #fa8348;
 }
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 20rem;
+  }
+}

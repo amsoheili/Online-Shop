@@ -12,6 +12,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1>Welcome To Online Shop</h1>
+        <h4>
+          Admin info:
+          <br /> username: admin
+          <br /> password: admin
+        </h4>
       </main>
     </div>
   );

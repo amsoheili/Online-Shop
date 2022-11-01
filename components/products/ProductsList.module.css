@@ -42,3 +42,13 @@
   display: grid;
   grid-template-columns: auto auto auto;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  .products-list {
+    grid-template-columns: auto;
+  }
+}

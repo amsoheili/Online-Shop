@@ -1,11 +1,4 @@
-/* @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .card,
   .footer {
     border-color: #222;
@@ -20,6 +13,7 @@
 
 .main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 70vh;
