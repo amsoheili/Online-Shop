@@ -5,9 +5,11 @@ const isUsernameUsed = async (username) => {
 
   const userData = await getUserData(username);
 
-  //console.log(`${userData.username} and ${userData !== ""}`);
-
-  return userData !== "";
+  // console.log(
+  //   `${userData.username} and ${typeof userData.username !== "undefined"}`
+  // );
+  // console.log(userData);
+  return typeof userData.username !== "undefined";
 };
 
 export default isUsernameUsed;
