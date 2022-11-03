@@ -2,21 +2,23 @@ import AccessError from "../../../components/AccessError";
 import Profile from "../../../components/Profile";
 import MongoClient from "mongodb";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { DATABASE_URI } from "../../../constants/database";
 
 const ProfilePage = (props) => {
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
 
   return isLoggedIn ? (
-    <Profile userData={props.userData} />
+    <>
+      <Profile userData={props.userData} />
+    </>
   ) : (
     <AccessError message="Please Login To Your Account First" />
   );
 };
 
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    "mongodb://127.0.0.1:27017/online-shop"
-  );
+  const client = await MongoClient.connect(DATABASE_URI);
 
   const db = client.db();
 
@@ -35,9 +37,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const username = context.params.username;
 
-  const client = await MongoClient.connect(
-    "mongodb://127.0.0.1:27017/online-shop"
-  );
+  const client = await MongoClient.connect(DATABASE_URI);
 
   const db = client.db();
 

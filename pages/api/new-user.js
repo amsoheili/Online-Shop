@@ -1,4 +1,5 @@
 import MongoClient from "mongodb/lib/mongo_client";
+import { DATABASE_URI } from "../../constants/database";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
@@ -7,7 +8,7 @@ const handler = async (req, res) => {
     // const uri =
     //   "mongodb+srv://soheili:soheili@cluster0.gvxtnwo.mongodb.net/online-shop?retryWrites=true&w=majority";
 
-    const uri = "mongodb://127.0.0.1:27017/online-shop";
+    const uri = DATABASE_URI;
 
     const client = await MongoClient.connect(uri);
 

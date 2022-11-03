@@ -1,4 +1,5 @@
 import MongoClient from "mongodb";
+import { DATABASE_URI } from "../../../constants/database";
 
 const CartPage = (props) => {
   return (
@@ -9,9 +10,7 @@ const CartPage = (props) => {
 };
 
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    "mongodb://127.0.0.1:27017/online-shop"
-  );
+  const client = await MongoClient.connect(DATABASE_URI);
 
   const db = client.db();
 
@@ -30,9 +29,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const username = context.params.username;
 
-  const client = await MongoClient.connect(
-    "mongodb://127.0.0.1:27017/online-shop"
-  );
+  const client = await MongoClient.connect(DATABASE_URI);
 
   const db = client.db();
 

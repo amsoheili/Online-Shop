@@ -2,6 +2,7 @@ import Head from "next/head";
 import { MongoClient } from "mongodb";
 
 import ProductsList from "../../components/products/ProductsList";
+import { DATABASE_URI } from "../../constants/database";
 
 let items = [
   { name: "p1", price: "20", description: "d1" },
@@ -29,7 +30,7 @@ export async function getStaticProps() {
   // const uri =
   //   "mongodb+srv://soheili:soheili@cluster0.gvxtnwo.mongodb.net/online-shop?retryWrites=true&w=majority";
 
-  const uri = "mongodb://127.0.0.1:27017/online-shop";
+  const uri = DATABASE_URI;
 
   const client = await MongoClient.connect(uri);
 
