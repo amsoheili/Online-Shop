@@ -49,4 +49,4 @@ export async function getStaticProps(context) {
   };
 }
 
-export default handler;
+export default CartPage;
