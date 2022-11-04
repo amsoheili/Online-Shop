@@ -1,6 +1,6 @@
 import classes from "./Profile.module.css";
 
-import Avatar from "@material-ui/core/Avatar";
+import Avatar from "@mui/material/Avatar";
 import UserOrders from "./temp/UserOrders";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

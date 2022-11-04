@@ -12,7 +12,7 @@ import classes from "./Layout.module.css";
 import logoutUser from "../../helper/logoutUser";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { AppBar } from "@material-ui/core";
+import AppBar from "@mui/material/AppBar";
 
 const Layout = (props) => {
   const user = {
