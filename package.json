@@ -9,28 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@babel/runtime": "^7.19.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.12",
+    "@mui/material": "^5.10.11",
     "@reduxjs/toolkit": "^1.8.6",
     "axios": "^1.1.0",
     "babel-plugin-macros": "^3.1.0",
-    "mongodb": "^4.11.0",
-    "next": "^13.0.2",
+    "mongodb": "^3.5.9",
+    "next": "12.3.1",
     "next-auth": "^4.14.0",
+    "next-redux-wrapper": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-redux": "^8.0.5",
-    "redux": "^4.2.0"
+    "react-redux": "^8.0.4",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "eslint": "8.24.0",
-    "eslint-config-next": "^13.0.1"
+    "eslint-config-next": "12.3.1"
   }
 }

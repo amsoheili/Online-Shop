@@ -1,5 +1,6 @@
 import MongoClient from "mongodb";
 import { DATABASE_URI } from "../../../constants/database";
+import Cart from "../../../components/Cart/Cart";
 
 const CartPage = (props) => {
   return (
